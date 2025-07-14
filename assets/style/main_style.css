@@ -1,0 +1,392 @@
+html {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(6, 14, 26);
+}
+h1, h2, h3, h4 {
+    font-family: "Sometype Mono", monospace;
+}
+
+h1 {
+    font-size: 25pt;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    line-height: 1.3;
+}
+h2 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: -10px 0 10px 0;
+    opacity: 0.5;
+}
+h3 {
+    font-size: 20pt;
+    margin: 0 0 10px 0;
+}
+.paragraph {
+    padding: 35px 50px;
+}
+.paragraph_centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 20%
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+img {
+    object-fit: cover;
+}
+#text-link {
+    transition-duration: 0.2s;
+}
+#text-link:hover {
+    opacity: 0.7;
+}
+
+/* ---------- Button ---------- */
+
+button {
+    position: relative;
+    background-color: transparent;
+    font-family: "Sometype Mono", monospace;
+    font-weight: bold;
+    font-size: 15pt;
+    color: white;
+    padding: 6px 8px;
+    border: 3px solid white;
+    transition: 0.2s;
+    z-index: 2;
+}
+button:hover {
+    /* background-color: white; */
+    color: black;
+    cursor: pointer;
+}
+button:after {
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    background: white;
+    transition: 0.2s ease-in-out;
+    width: 0;
+    z-index: -1;
+}
+
+button:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+/* ---------- Navbar ---------- */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+.page {
+    position: relative;
+}
+.navbar-pages {
+    width: 720px;
+    display: flex;
+}
+.navbar-pages a {
+    margin: auto;
+    font-family: "Sometype Mono", monospace;
+    align-items: center;
+    padding: 5px 8px;
+    overflow: hidden;
+}
+.page:after {
+    right: 8px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    background: white;
+    transition: 0.2s ease-in-out;
+    width: 0;
+}
+.page:hover:after {
+    left: 8px;
+    width: calc(100% - 16px);
+}
+
+.star-logo {
+    height: 64px;
+    display: block;
+    transition: 0.2s;
+}
+.star-logo:hover {
+    opacity: 0.7;
+}
+.we-are-star {
+    font-family: "Sometype Mono", monospace;
+    position: absolute;
+    font-size: 30pt;
+    bottom: 55px;
+    margin-left: 55px;
+}
+.text-img {
+    display: flex;
+    justify-content: space-between;
+}
+.text-img-emph {
+    background-image: url('../img/ambitions_photo.png');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    height: 600px;
+}
+.full-width-img {
+    display: block;
+    width: 100vw;
+    opacity: 15%;
+    height: 600px;
+}
+
+.text-img-scale-emph {
+    position: relative;
+    z-index: 0;
+}
+.text-scale-emph {
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+.full-width-scale-img {
+    display: block;
+    width: 100vw;
+    opacity: 15%;
+}
+
+.text-img-sqr {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* ---------- Subpages ---------- */
+
+.title-subpage {
+    font-family: "Sometype Mono", monospace;
+    position: absolute;
+    font-size: 30pt;
+    bottom: 375px;
+    margin-left: 55px;
+}
+.sub-cover {
+    height: 58vh;
+    width: 100%;
+    margin-bottom: -8px;
+}
+
+/* ---------- Card ---------- */
+
+.card-collection {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 25px 50px;
+}
+.card-coll-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: -10px;
+}
+#card-coll-top-title {
+    padding: 10px 0 0 0;
+}
+.card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    text-align: left;
+    margin: 25px;
+}
+.small-card {
+    width: 330px;
+    height: 430px;
+}
+.square-card {
+    width: 200px;
+    height: 200px;
+}
+.hidden-card-text {
+    position: absolute;
+    width: 330px;
+    height: 560px;
+    right: 100%;
+    transition: 0.2s ease-in-out;
+    padding: 20px;
+    z-index: 1;
+}
+#card-title h1 {
+    margin: 0 0 10px 0;
+}
+.hidden-card-text h1 {
+    margin: 0 0 10px 0;
+}
+.small-hidden-card-text {
+    width: 290px;
+    height: 390px;
+    font-size: 13pt;
+    overflow-y: scroll;
+}
+.square-hidden-card-text {
+    width: 160px;
+    height: 160px;
+    font-size: 15pt;
+    overflow-y: scroll;
+}
+.small-hidden-card-text button {
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+.card-img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.card-front {
+    width: 100%;
+    transition: 0.2s ease-in-out;
+}
+#card-title {
+    position: absolute;
+    width: calc(100% - 50px);
+    transition: 0.2s ease-in-out;
+    margin: 20px 25px;
+}
+
+.card:hover .hidden-card-text,
+.small-card:hover .hidden-card-text,
+.square-card:hover .hidden-card-text {
+    right: 0;
+}
+.card:hover .card-front,
+.small-card:hover .card-front {
+    filter: brightness(0.3);
+}
+.card:hover #card-title,
+.small-card:hover #card-title {
+    opacity: 0;
+}
+#contacts-icon {
+    transition-duration: 0.2s;
+    width: 35px;
+}
+#contacts-icon:hover {
+    opacity: 0.7;
+}
+
+/* ---------- Page Specific ---------- */
+
+.flight-computer-illustration {
+    width: 45%;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+/* ---------------- Outreach ----------------*/
+
+.the-problem {
+    padding-bottom: 50px;
+    background-color: rgb(21, 26, 37);
+    align-items: center;
+}
+.the-solution {
+    margin-top: -45px;
+    padding-bottom: 50px;
+    background-color: rgb(33, 39, 48);
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px auto;
+}
+  
+td, th {
+    border: 2px solid white;
+    text-align: left;
+    padding: 10px;
+}
+th {
+    text-decoration: none;
+}
+
+tr:last-child {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-collapse: separate;
+}
+
+
+/* ----------------------------------------*/
+/* ---------------- Footer ----------------*/
+/* ----------------------------------------*/
+
+footer {
+    padding: 50px 50px 0 50px;
+    background-color: rgb(197, 158, 29);
+    height: 30vh;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer-social {
+    text-align: center;
+    width: 456px;
+    font-size: 10pt;
+}
+#social {
+    width: 50px;
+    transition-duration: 0.2s;
+}
+#social:hover {
+    opacity: 0.7;
+}
+
+#footer-contact-us {
+    text-align: center;
+    width: 456px;
+}
+
+#footer-join-today {
+    width: 456px;
+    font-size: 10pt;
+}
+
+.ocf {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 10pt;
+    align-items: center;
+}
