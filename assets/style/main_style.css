@@ -107,7 +107,7 @@ button:hover:after {
     position: relative;
 }
 .navbar-pages {
-    width: 720px;
+    width: 820px;
     display: flex;
 }
 .navbar-pages a {
@@ -345,7 +345,6 @@ tr:last-child {
 footer {
     padding: 50px 50px 0 50px;
     background-color: rgb(197, 158, 29);
-    height: 30vh;
 }
 .footer-content {
     display: flex;
@@ -478,10 +477,8 @@ footer {
     #square-img {display: none;}
     .card-collection {padding: 25px 0}
     .ambition-background {padding: 50px}
-    
+    .footer-content {flex-direction: column; justify-content: space-around; height: 300px;}
 }
-
-
 
 .main-cover {
     height: 100vh;
